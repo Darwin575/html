@@ -6,33 +6,29 @@
 function showInput() {
     event.preventDefault();
 
-    // Get values from the input fields
+
     var cname = document.getElementById("cname").value;
     var Nname = document.getElementById("Nname").value;
 
-    // Check if cname and Nname are not empty
+ 
     if (!cname || !Nname) {
         alert('Please enter both name and nick name!');
         return;
     }
 
-    // Build the content to display
+
     var contentToShow = '';
 
-    // Display the emoji '&#128155;' 12 times
     for (let i = 0; i < 12; i++) {
         contentToShow += '&#128155; ';
     }
 
-    // Add a line break before the name
     contentToShow += "<br><br>";
 
-    // Continue building the content with the name and other fields
     contentToShow +=
         "<br>Name: " + cname +
         "<br><br>Nick name: " + Nname;
 
-    // Get values from the other input fields
     var selectedDate = new Date(document.getElementById('date').value);
     var genderValue = document.querySelector('input[name="gender"]:checked');
     var civilStatus = document.querySelector('input[name="status"]:checked');
@@ -70,10 +66,8 @@ function showInput() {
         contentToShow += "<br><br>Favorite sport: " + favoriteSport;
     }
 
-    // Add the emoji at the end of the content
     contentToShow += '<br><br>KEEP SAFE AND GOOD DAY!!! &#128519;<br>';
 
-    // Set the new content to the element
     document.getElementById('display').innerHTML = contentToShow;
 }
 
