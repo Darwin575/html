@@ -62,7 +62,7 @@ button:hover {
 }
 .head{
     padding: 15px;
-    width: 770px;
+    width: 49.7%;
     font-family:  Georgia, serif;
     font-style: italic;
     background-color: rgb(0,0,0,0.6) ;
@@ -76,7 +76,7 @@ button:hover {
 .form{
     padding: 50PX;
     margin: auto;
-    width: 700px;
+    width: 45%;
     color: #ffffff;
     background-color:rgba(255,0,255,0.3);
     border-radius: 0px 0px 50px 50px;
