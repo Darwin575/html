@@ -93,4 +93,6 @@ button:hover {
   border-radius: 50px 50px 50px 50px;
   outline-color: rgb(8, 8, 179);
   outline-style: solid;
+    margin-left: auto;
+    margin-right: auto;
 }
