@@ -3,10 +3,11 @@ Body {
     background-image:  url("https://i.pinimg.com/originals/61/8f/08/618f083c61a7460ce0a6064319af41bd.gif");
     background-size: contain;   
     background-attachment: fixed;
-    margin-top: 100px;
+    margin-top: 70px;
     text-align: center;
     font-family:  Cinzel, serif;
-    margin: 100px;
+    margin-left: auto;
+    margin-right: auto;
     }
 input[type=text] { 
   font-family:  Cinzel, serif;
