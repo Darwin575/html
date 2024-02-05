@@ -1,0 +1,103 @@
+
+Body { 
+    background-image:  url("https://i.pinimg.com/originals/61/8f/08/618f083c61a7460ce0a6064319af41bd.gif");
+    background-size: contain;   
+    background-attachment: fixed;
+    margin-top: 70px;
+    text-align: center;
+    font-family:  Cinzel, serif;
+    }
+input[type=text] { 
+  font-family:  Cinzel, serif;
+  font-weight: bold;
+  padding: 10px;
+     width: 200px;
+    border-radius: 70px;
+    outline-color: rgb(255,0,255);
+    outline-style: solid;
+    position: relative;
+}
+input[type="date"] {
+    width: 100px;
+    padding: 5px;
+    border-radius: 70px;
+    margin-bottom: 10px;
+    outline-color: rgb(255,0,255);
+    
+  }
+ 
+input[type=text]:hover  {
+  width: 300px;
+}
+input[type=radio] {
+ height: 1em;
+ width: 1em;
+  margin-right: 4px;
+  position: relative; 
+}
+
+
+/*select:hover {
+  width: 800px;
+}*/
+button {
+  padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  background-color: rgb(255,0,255); 
+}
+
+button:hover {
+  width: 70px;
+  height: 40px;
+  
+}
+.head{
+    padding: 15px;
+    width: 670px;
+    font-family:  Georgia, serif;
+    font-style: italic;
+    background-color: rgb(0,0,0,0.6) ;
+    color: #ffffff;
+    margin: auto;
+    border-radius: 50px 50px 0px 0px;
+    outline-color: rgb(255,0,255);
+    outline-style: solid;
+}
+
+
+.form{
+    padding: 50PX;
+    margin: auto;
+    width: 80%;
+    max-width: 600px;
+    color: #ffffff;
+    background-color:rgba(255,0,255,0.3);
+    border-radius: 0px 0px 50px 50px;
+    padding-bottom: 50px;
+    outline-color: rgb(255,0,255);
+    outline-style: solid;
+}
+
+.user-input{
+  position: center;
+  padding: 100px;
+  margin: auto;
+  width: 21%;
+  color: gold;
+  background-color: rgba(8, 8, 179, 0.3);
+  font-weight: bold;
+  border-radius: 50px 50px 50px 50px;
+  outline-color: rgb(8, 8, 179);
+  outline-style: solid;
+}
+@media screen and (max-width: 768px) {
+  /* Adjust styles for screens up to 768 pixels wide (tablet size) */
+  input[type=text], input[type="date"] {
+      width: 100%;
+      max-width: none; /* Remove max-width for full-width on smaller screens */
+  }
+}
