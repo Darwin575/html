@@ -8,23 +8,18 @@
 function showInput() {
     event.preventDefault();
 
-    // Get values from the input fields
     var cname = sanitizeInput(document.getElementById("cname").value);
     var Nname = sanitizeInput(document.getElementById("Nname").value);
 
-    // Check if cname and Nname are not empty
     if (!cname || !Nname) {
         alert('Please enter both name and nick name!');
         return;
     }
 
-    // Build the content to display
     var contentToShow = '';
 
-    // Display the emoji '&#128155;' 12 times using repeat()
     contentToShow += "&#128155; ".repeat(12);
 
-    // Add a line break before the name
     contentToShow += "<br><br>";
 
     // Continue building the content with the name and other fields
