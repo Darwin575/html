@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<Html lang="en">  
+<Head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <script language="JavaScript"> 
+function showInput() {
+    event.preventDefault();
+
+    // Get values from the input fields
+    var cname = sanitizeInput(document.getElementById("cname").value);
+    var Nname = sanitizeInput(document.getElementById("Nname").value);
+
+    // Check if cname and Nname are not empty
+    if (!cname || !Nname) {
+        alert('Please enter both name and nick name!');
+        return;
+    }
+
+    // Build the content to display
+    var contentToShow = '';
+
+    // Display the emoji '&#128155;' 12 times using repeat()
+    contentToShow += "&#128155; ".repeat(12);
+
+    // Add a line break before the name
+    contentToShow += "<br><br>";
+
+    // Continue building the content with the name and other fields
+    contentToShow +=
+        "<br>Name: " + cname +
+        "<br><br>Nick name: " + Nname;
+
+    // Get values from the other input fields
+    var selectedDate = new Date(document.getElementById('date').value);
+    var genderValue = document.querySelector('input[name="gender"]:checked');
+    var civilStatus = document.querySelector('input[name="status"]:checked');
+    var favoriteFood = sanitizeInput(document.getElementById("Ffood").value);
+    var favoriteColor = sanitizeInput(document.getElementById("Fcolor").value);
+    var firstCrush = sanitizeInput(document.getElementById("Fcrush").value);
+    var favoriteSport = sanitizeInput(document.getElementById("Fsport").value);
+
+    if (selectedDate && !isNaN(selectedDate.getTime())) {
+        var formattedDate = selectedDate.toLocaleDateString();
+        contentToShow += "<br><br>Date of birth: " + formattedDate;
+    }
+
+    if (genderValue) {
+        contentToShow += "<br><br>Gender: " + genderValue.value;
+    }
+
+    if (civilStatus) {
+        contentToShow += "<br><br>Civil status: " + civilStatus.value;
+    }
+
+    if (favoriteFood) {
+    contentToShow += "<br><br>Favorite food: " + sanitizeInput(favoriteFood);
+}
+
+if (favoriteColor) {
+    contentToShow += "<br><br>Favorite color: " + sanitizeInput(favoriteColor);
+}
+
+if (firstCrush) {
+    contentToShow += "<br><br>First crush: " + sanitizeInput(firstCrush);
+}
+
+if (favoriteSport) {
+    contentToShow += "<br><br>Favorite sport: " + sanitizeInput(favoriteSport);
+}
+    // Add the emoji at the end of the content
+    contentToShow += '<br><br>KEEP SAFE AND GOOD DAY!!! &#128519;<br>';
+
+    // Set the new content to the element
+    document.getElementById('display').innerHTML = contentToShow;
+}
+
+// Function to sanitize input to prevent XSS
+function sanitizeInput(input) {
+    return input.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+
+
+
+   
+  </script>
+ <link rel="stylesheet" href="css/style.css">
+
+<Title>   
+SLAM BOOK
+</Title>
+
+</Head>
+<Body>
+  <h1 class="head">SLAM BOOK</h1>
+  <form class="form" name="formid">
+      <label for="cName">Complete name:</label>
+      <input type="text" placeholder="Last name, First name M.I." id="cname" required><br><br>
+      
+      <label for="nName">Nick name:</label>
+      <input type="text" id="Nname" required><br><br>
+      
+      <label for="bDay">Birthdate: </label>
+      <input type="date" id="date" required max="2024-01-01" style="outline-style: solid;"/><br><br>
+
+      <div class="radio-container">
+          <legend>Gender:</legend>
+          <input type="radio" name="gender" value="male">Male
+          <input type="radio" name="gender" value="female">Female
+      </div>
+
+      <div class="radio-container">
+          <legend>Civil status:</legend>
+          <input type="radio" name="status" value="single">Single
+          <input type="radio" name="status" value="married">Married
+      </div>
+
+      <div class="form-container">
+          <div class="row">
+              <div class="column">
+                  <label for="Ffood">Favorite food:</label>
+                  <input type="text" id="Ffood">
+              </div>
+              <div class="column">
+                  <label for="Fcolor">Favorite color:</label>
+                  <input type="text" id="Fcolor">
+              </div>
+          </div>
+
+          <div class="row">
+              <div class="column">
+                  <label for="Fcrush">First crush:</label>
+                  <input type="text" id="Fcrush">
+              </div>
+              <div class="column">
+                  <label for="Fsport">Favorite sport:</label>
+                  <input type="text" id="Fsport">
+              </div>
+          </div>
+      </div>
+
+      <br>
+      <button onclick="showInput()">Display</button>
+  </form>
+
+  <br><br>
+ 
+     <p class="user-input"><span id='display'>
+        <script>
+            document.write('&#128156; '.repeat(12));       
+        </script></span></p>
+      
+
+</Body>
+</Html>
